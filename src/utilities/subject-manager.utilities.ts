@@ -1,19 +1,20 @@
 import { Subject } from 'rxjs';
 
+export interface SubjectInfo {
+    value:string
+    type:string
+}
 
 class SubjectGenerator {
 
-    private Subject = new Subject();
+    private Subject = new Subject<SubjectInfo>;
 
     getSubject() {
-
         return this.Subject.asObservable();
     }
 
-    setSubject(value
-        ) {
-
-        return this.Subject.next(value);
+    setSubject (value:SubjectInfo) {
+        this.Subject.next(value);
     }
 }
 

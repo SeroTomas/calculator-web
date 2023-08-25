@@ -1,12 +1,16 @@
-import './App.css'
-import { Display, Keyword } from './components'
+import { Display, Keyword } from "./components"
+
+
+
 
 function App() {
 
   return (
-    <div>
-      <Display />
-      <Keyword />
+    <div className='h-screen flex justify-center items-center'>
+      <div className='border max-w-sm flex-grow'>
+        <Display />
+        <Keyword/>
+      </div>
     </div>
   )
 }
